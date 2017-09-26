@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class guess {
+public class GuessingGame {
 	public static void main(String[]args)
 	{
 		guessgame();
