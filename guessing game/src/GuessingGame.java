@@ -54,12 +54,12 @@ public class GuessingGame {
 			Scanner guess=new Scanner(System.in);
 			try
 			{
-				int z=guess.nextInt();
-				if(answer!=z)
+				int xd=guess.nextInt();
+				if(answer!=xd)
 				{
 				System.out.println("Aw your answer is wrong.");
 				}
-				if(answer==z)
+				if(answer==xd)
 				{
 				System.out.println("Yay you guessed the number.");
 				}
