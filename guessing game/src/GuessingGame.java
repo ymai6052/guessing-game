@@ -1,4 +1,11 @@
+/*
+ * Yiren Mai
+ * 9/26/17
+ * GuessingGame
+ */
 import java.util.Scanner;
+import java.lang.Math;
+import java.util.InputMismatchException;
 public class GuessingGame {
 	public static void main(String[]args)
 	{
@@ -24,22 +31,45 @@ public class GuessingGame {
 	
 	public static void guessgame()
 	{
-		int answer=(int)((Math.random())*10+1);
-		Scanner guess=new Scanner(System.in);
-		System.out.println("Try guessing the number");
-		int x=guess.nextInt();
-		System.out.println(answer);
-		while(answer!=x)
+		System.out.println("What is your name");
+		Scanner input=new Scanner(System.in);
+		String x=input.next();
+		System.out.println("How do you do "+x);
+		System.out.println("How old are you this year?");
+		int y=input.nextInt();
+		if(y>30)
 		{
-			int y=guess.nextInt();
-			if(answer!=y)
+			System.out.println("wow you are old"+x);
+		}
+		else
+		{
+			System.out.println("You are pretty young "+x+" how is your youth?");
+		}
+		
+		int answer=(int)((Math.random())*10+1);
+		System.out.println("Try guessing the number");
+		int num=0;
+		System.out.println(answer);
+		while(answer!=num)
+		{
+			Scanner guess=new Scanner(System.in);
+			try
 			{
-			System.out.println("Aw your answer is wrong.");
+				int z=guess.nextInt();
+				if(answer!=z)
+				{
+				System.out.println("Aw your answer is wrong.");
+				}
+				if(answer==z)
+				{
+				System.out.println("Yay you guessed the number.");
+				}
 			}
-			if(answer==y)
+			catch(InputMismatchException e)
 			{
-			System.out.println("Yay you guessed the number.");
+				System.out.println("you have error "+e);
 			}
+			
 		}
 	}
 }
