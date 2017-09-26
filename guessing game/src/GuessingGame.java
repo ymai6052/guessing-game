@@ -43,13 +43,12 @@ public class GuessingGame {
 		}
 		else
 		{
-			System.out.println("You are pretty young "+x+" how is your youth?");
+			System.out.println("You are pretty young "+x);
 		}
 		
 		int answer=(int)((Math.random())*10+1);
-		System.out.println("Try guessing the number");
+		System.out.println("Try guessing a number between 1 and 10");
 		int num=0;
-		System.out.println(answer);
 		while(answer!=num)
 		{
 			Scanner guess=new Scanner(System.in);
