@@ -6,7 +6,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.InputMismatchException;
-public class Guessinggame {
+public class GuessingGame {
 	public static void main(String[]args)
 	{
 		guessgame();
