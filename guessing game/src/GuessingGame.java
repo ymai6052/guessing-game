@@ -46,8 +46,8 @@ public class GuessingGame {
 			System.out.println("You are pretty young "+x);
 		}
 		
-		int answer=(int)((Math.random())*10+1);
-		System.out.println("Try guessing a number between 1 and 10");
+		int answer=(int)((Math.random())*100+1);
+		System.out.println("Try guessing a number between 1 and 100");
 		int num=0;
 		while(answer!=num)
 		{
