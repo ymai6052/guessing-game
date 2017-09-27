@@ -6,7 +6,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.InputMismatchException;
-public class GuessingGame {
+public class Guessinggame {
 	public static void main(String[]args)
 	{
 		guessgame();
@@ -21,7 +21,7 @@ public class GuessingGame {
 		int y=input.nextInt();
 		if(y>30)
 		{
-			System.out.println("wow you are old"+x);
+			System.out.println("wow you are old "+x);
 		}
 		else
 		{
@@ -57,7 +57,15 @@ public class GuessingGame {
 				int xd=guess.nextInt();
 				if(answer!=xd)
 				{
-				System.out.println("Aw your answer is wrong.");
+					if(xd>answer)
+					{
+						System.out.println("Aw your answer is wrong. its smaller");
+					}
+					else
+					{
+						System.out.println("Aw your answer is wrong.its bigger");
+					}
+				
 				}
 				if(answer==xd)
 				{
